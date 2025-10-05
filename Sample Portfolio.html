@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222;
+      --accent: #4f46e5;
+      --muted: #666;
+      --radius: 12px;
+      --ff: "Segoe UI", system-ui, sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--ff);
+      line-height: 1.5;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(135deg, var(--accent), #60a5fa);
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
+    .about p {
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+    .projects {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .project {
+      background: #e7f4ff;
+      padding: 1rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .project:hover {
+      transform: translateY(-4px);
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    .contact a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius);
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hallo!!, Jovan Here!! 👋</h1>
+    <p>I made this website with the help of my bestfriend Ai ChatGPT!.</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Nothing's intereting about me, so don't bother trying to get to know me.<3 
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3> Mid! Portfolio</h3>
+        <p>A very not so creative work I made shoud be put in here, but i dont have any work that is worth sharing, so i'm just gonna leave this blank.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you’d like to collaborate, plss don't, just say hi and leave like nothing happened!</p>
+    <a href="mailto:pormateloj03.com">Say Hi ✉️</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Jovan. Made with ❤️ and a bit of caffeine.</p>
+  </footer>
+</body>
+</html>
