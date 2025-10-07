@@ -35,6 +35,14 @@
       font-size: 1.2rem;
       opacity: 0.9;
     }
+
+    /* Different color per letter */
+    .hallo span:nth-child(1) { color: #ff595e; }
+    .hallo span:nth-child(2) { color: #ffca3a; }
+    .hallo span:nth-child(3) { color: #8ac926; }
+    .hallo span:nth-child(4) { color: #1982c4; }
+    .hallo span:nth-child(5) { color: #6a4c93; }
+
     section {
       max-width: 800px;
       margin: 3rem auto;
@@ -89,7 +97,11 @@
 </head>
 <body>
   <header>
-    <h1>Hallo!!, Jovan Here!! 👋</h1>
+    <h1>
+      <span class="hallo">
+        <span>H</span><span>a</span><span>l</span><span>l</span><span>o</span>
+      </span>!!, Jovan Here!! 👋
+    </h1>
     <p>I made this website with the help of my bestfriend Ai ChatGPT!.</p>
   </header>
 
@@ -104,8 +116,8 @@
     <h2>Projects</h2>
     <div class="projects">
       <div class="project">
-        <h3> Mid! Portfolio</h3>
-        <p>A very not so creative work I made shoud be put in here, but i dont have any work that is worth sharing, so i'm just gonna leave this blank.</p>
+        <h3>Mid! Portfolio</h3>
+        <p>A very not so creative work I made should be put in here, but I don’t have any work that is worth sharing, so I’m just gonna leave this blank.</p>
       </div>
     </div>
   </section>
@@ -121,3 +133,4 @@
   </footer>
 </body>
 </html>
+
