@@ -5,11 +5,35 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>My Portfolio</title>
   <style>
+    .hallo span {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.hallo span:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+    .intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgb(56, 255, 76);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
     :root {
-      --bg: #ffffff;
-      --text: #222;
+      --bg: #13042e;
+      --text: #ffffff;
       --accent: #4f46e5;
-      --muted: #666;
+      --muted: #ffffff;
       --radius: 12px;
       --ff: "Segoe UI", system-ui, sans-serif;
     }
@@ -23,8 +47,8 @@
     header {
       text-align: center;
       padding: 4rem 1rem 2rem;
-      background: linear-gradient(135deg, var(--accent), #60a5fa);
-      color: white;
+      background: linear-gradient(135deg, var(--accent), #bda3ff);
+      color: rgb(255, 255, 255);
     }
     header h1 {
       margin: 0;
@@ -37,17 +61,24 @@
     }
 
     /* Different color per letter */
-    .hallo span:nth-child(1) { color: #ff595e; }
-    .hallo span:nth-child(2) { color: #ffca3a; }
-    .hallo span:nth-child(3) { color: #8ac926; }
-    .hallo span:nth-child(4) { color: #1982c4; }
-    .hallo span:nth-child(5) { color: #6a4c93; }
+    .hallo span:nth-child(1) { color: #4a41ff; }
+    .hallo span:nth-child(2) { color: #3afff2; }
+    .hallo span:nth-child(3) { color: #39c926; }
+    .hallo span:nth-child(4) { color: #fffc34; }
+    .hallo span:nth-child(5) { color: #ff4b4b; }
 
     section {
       max-width: 800px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
+    .container {
+  max-width: 800px;   
+  margin: 0 auto;     
+  background: rgb(51, 8, 100);  
+  padding: 0 1.5rem;
+}
+
     h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
@@ -59,13 +90,21 @@
       font-size: 1.05rem;
       color: var(--muted);
     }
+    .project-img {
+  width: 50%;              
+  height: 180px;         
+  object-fit: cover;      
+  border-radius: var(--radius);
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
     .projects {
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
     .project {
-      background: #e7f4ff;
+      background: #111cb7;
       padding: 1rem;
       border-radius: var(--radius);
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -77,6 +116,30 @@
     .project h3 {
       margin-top: 0;
     }
+
+    /* sa mga pictures to */
+    .projects-scroll {
+  display: flex;
+  overflow-x: auto;        /* sa pag scroll */
+  gap: 1rem;               /* space nung pic */
+  scroll-behavior: smooth; /* smooth scrolling */
+  padding-bottom: 1rem;    /* spacing at bottom */
+}
+.project {
+  flex: 0 0 80%;           
+  max-width: 600px;        
+  background: #6952ff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(142, 26, 171, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
     .contact a {
       display: inline-block;
       margin-top: 0.5rem;
@@ -93,17 +156,24 @@
       color: var(--muted);
       font-size: 0.9rem;
     }
+
   </style>
 </head>
 <body>
+  <div class="container">
   <header>
-    <h1>
-      <span class="hallo">
-        <span>H</span><span>a</span><span>l</span><span>l</span><span>o</span>
-      </span>!!, Jovan Here!! 👋
-    </h1>
-    <p>I made this website with the help of my bestfriend Ai ChatGPT!.</p>
-  </header>
+  <div class="intro">
+    <div>
+      <h1>
+        <span class="hallo">
+          <span>H</span><span>a</span><span>l</span><span>l</span><span>o</span>
+        </span>!!, Jovan Here!! 👋
+      </h1>
+       <img src="saitama.png" alt="Jovan's photo" class="profile-pic">
+      <p>I made this website with the help of my bestfriend Ai ChatGPT!.</p>
+    </div>
+  </div>
+</header>
 
   <section class="about">
     <h2>About Me</h2>
@@ -113,20 +183,31 @@
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Mid! Portfolio</h3>
-        <p>A very not so creative work I made should be put in here, but I don’t have any work that is worth sharing, so I’m just gonna leave this blank.</p>
-      </div>
+  <h2>Projects</h2>
+  <div class="projects-scroll">
+    <div class="project">
+      <h3>Mid!</h3>
+      <p>A very not so creative work I made should be put in here...</p>
+      <img src="smallisland.png" alt="Project 1" class="project-img" />
     </div>
-  </section>
+
+    <div class="project">
+      <h3>Another Mid!</h3>
+      <p>Another random work I made while testing things out...</p>
+      <img src="city.png" alt="Project 2" class="project-img" />
+    </div>
+    <!-- add nalang nung iba -->
+
+  </div>
+</section>
+
 
   <section class="contact">
     <h2>Get in Touch</h2>
     <p>If you’d like to collaborate, plss don't, just say hi and leave like nothing happened!</p>
-    <a href="mailto:pormateloj03.com">Say Hi ✉️</a>
+    <a href="mailto:pormateloj03@gmail.com">Say Hi ✉️</a>
   </section>
+  </div>
 
   <footer>
     <p>© 2025 Jovan. Made with ❤️ and a bit of caffeine.</p>
